@@ -1,4 +1,6 @@
 const canvas = document.getElementById('canvas1');
+const project1 = document.getElementById('project12');
+const project2 = document.getElementById('project34');
 
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -131,9 +133,21 @@ window.addEventListener('resize',
         init();
     }
 
-
-
+    
 );
+
+
+function resize() {
+    var height = window.innerHeight*.3;
+    var width = window.innerWidth*.15;
+    project1.height= height;
+    project1.width= width;
+    project2.height= height*1.5;
+    project2.width= width;
+  }
+  
+  window.onload = resize;
+  window.onresize = resize;
 
 window.addEventListener('mouseout',
     function(){

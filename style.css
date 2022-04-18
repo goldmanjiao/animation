@@ -11,8 +11,8 @@
     grid-auto-rows: minmax(150px, auto);
     grid-gap: 3px;
     grid-template-areas: 
-        "n n n n n n p h h h"
-        "p1 p1 p2 p2 p3 p3 p4 p4 p5 p5";
+        "n n n n n p p h h h"
+        "p1 p1 p1 p2 p3 p3 p3 p4 p5 p5";
 
 }
 
@@ -26,7 +26,7 @@
 }
 
 #name{
-    text-align: center;
+    text-align: right;
     font-family: 'Indie Flower', cursive;
     color:white;
     font-size:80px;
@@ -56,7 +56,36 @@
 
 }
 
+.about{
+    grid-area:h;
+    background-color: chocolate;
+    color: white;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
 .project1{
     grid-area :p1;
     text-align: center;
+}
+
+.project2{
+    grid-area:p3;
+    text-align: center;
+}
+
+#project23{
+    width:28em;
+    height:20em;
+}
+
+h1{
+    font-family: 'Indie Flower', cursive;
+    color:white;
+}
+p{
+    text-align: center;
+}
+a:hover{
+    background-color:red;
 }
