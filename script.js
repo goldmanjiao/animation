@@ -1,6 +1,6 @@
-const canvas = document.getElementById('canvas1')
+const canvas = document.getElementById('canvas1');
 
-const ctx = canvas.getContext('2d')
+const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -11,13 +11,14 @@ let mouse = {
     y: null,
     radius: (canvas.height/80) * (canvas.width/80)
 
-};
+}
 
 window.addEventListener('mousemove', 
     function(event){
         mouse.x = event.x;
         mouse.y = event.y;
-});
+    }
+);
 
 class Particle {
     constructor(x,y,directionX,directionY, size, color){
@@ -65,10 +66,11 @@ class Particle {
             if ((mouse.y > this.y) && (this.y > this.size*10)){
                 this.y -= 10;
             }
-            this.x += this.directionX;
-            this.y += this.directionY;
-            this.draw()
+            
         }
+        this.x += this.directionX;
+        this.y += this.directionY;
+        this.draw()
 
     }
 }
